@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mylunora</title>
+  <meta name="description" content="Download the latest package, unlock with the archive password, and run the current version.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,650;1,6..72,600&family=Nunito:wght@400;600;700;800&family=IBM+Plex+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="header">
+    <p class="wordmark" data-i18n="brand">mylunora</p>
+    <nav class="langs" aria-label="Language">
+      <button type="button" class="lang is-active" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" class="lang" data-lang="zh" aria-pressed="false">中文</button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="intro shell">
+      <p class="kicker" data-i18n="kicker">Package ready</p>
+      <h1 data-i18n="headline">Latest release</h1>
+      <p class="dek" data-i18n="dek">Save the archive, copy the password, extract, then run the current version.</p>
+    </section>
+
+    <section class="action shell">
+      <button type="button" class="download" id="downloadBtn">
+        <span class="download-glow" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 4v11m0 0-3.5-3.5M12 15l3.5-3.5M5 19h14" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span data-i18n="download">Download ZIP</span>
+      </button>
+      <p class="fineprint" data-i18n="fineprint">One archive. Extract locally, then continue.</p>
+    </section>
+
+    <section class="secret shell" aria-labelledby="passwordHeading">
+      <div class="secret-copy">
+        <h2 id="passwordHeading" data-i18n="passwordTitle">Archive password</h2>
+        <p data-i18n="passwordHint">Required when extracting the ZIP</p>
+      </div>
+      <div class="secret-panel">
+        <code class="password shimmer" id="passwordDisplay">••••••••</code>
+        <button type="button" class="copy" id="copyPassword" data-i18n="copy">Copy</button>
+      </div>
+    </section>
+
+    <section class="guide shell" aria-labelledby="guideHeading">
+      <h2 id="guideHeading" data-i18n="guideTitle">After download</h2>
+      <ol class="timeline">
+        <li class="step-card">
+          <span class="index">01</span>
+          <p data-i18n="step1">Open your Downloads folder</p>
+        </li>
+        <li class="step-card">
+          <span class="index">02</span>
+          <p data-i18n="step2">Right-click the ZIP → Extract All (or 7-Zip / WinRAR)</p>
+        </li>
+        <li class="step-card is-key">
+          <span class="index">03</span>
+          <div class="step-body">
+            <p data-i18n="step3">When asked, paste this password:</p>
+            <div class="secret-panel compact">
+              <code class="password shimmer" id="passwordInline">••••••••</code>
+              <button type="button" class="copy" id="copyPasswordInline" data-i18n="copy">Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="step-card">
+          <span class="index">04</span>
+          <p data-i18n-html="step4">Open the folder and run the <em>current version</em></p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
